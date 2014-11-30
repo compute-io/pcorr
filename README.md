@@ -44,6 +44,13 @@ var mat = pcorr( [x,y] );
 ```
 
 
+## Notes
+
+__Beware__ of floating point errors. Computing a linear correlation coefficient requires computing square roots and involves division. Both operations can introduce small errors during calculation.
+
+Efforts have been made to ensure no value exceeds `+-1`. Note, however, that perfectly correlated `arrays` are __not__ guaranteed to yield precise correlation coefficients of `+-1`. 
+
+
 ## Examples
 
 ``` javascript
