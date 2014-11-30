@@ -25,7 +25,31 @@
   "keywords": [
     "compute.io",
     "compute",
-    "computation"
+    "computation",
+    "mathematics",
+    "math",
+    "statistics",
+    "stats",
+    "variance",
+    "covariance",
+    "sample",
+    "population",
+    "covariance",
+    "covariance matrix",
+    "cov",
+    "var",
+    "linear",
+    "correlation",
+    "corr",
+    "coefficient",
+    "coef",
+    "covary",
+    "timeseries",
+    "array",
+    "pearson",
+    "pearsons r",
+    "pcc",
+    "ppmcc"
   ],
   "bugs": {
     "url": "https://github.com/compute-io/pcorr/issues"

@@ -1,8 +1,8 @@
-pcorr
+Pearson Product-Moment Correlation Coefficient
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
 
-> Computes the Pearson product-moment correlation coefficients between one or more numeric arrays.
+> Computes the [Pearson product-moment correlation coefficients](http://en.wikipedia.org/wiki/Pearson_product-moment_correlation_coefficient) between one or more numeric arrays.
 
 
 ## Installation
@@ -19,18 +19,49 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 To use the module,
 
 ``` javascript
-var foo = require( 'compute-pcorr' );
+var pcorr = require( 'compute-pcorr' );
 ```
 
-#### foo( arr )
+#### pcorr( arr1[, arr2,...] )
 
-What does this function do?
+Computes the [Pearson product-moment correlation coefficients](http://en.wikipedia.org/wiki/Pearson_product-moment_correlation_coefficient) between one or more numeric arrays.
+
+``` javascript
+var x = [ 1, 2, 3, 4, 5 ],
+	y = [ 5, 4, 3, 2, 1 ];
+
+var mat = pcorr( x, y );
+// returns [[1,-1],[-1,1]]
+```
+
+Note: for univariate input, the returned [correlation matrix](http://en.wikipedia.org/wiki/Correlation_and_dependence#Correlation_matrices) contains a single element equal to unity.
+
+If the number of arrays is dynamic, you may want the flexibility to compute linear correlation coefficients for an arbitrary `array` collection. To this end, the function also accepts an `array` of `arrays`.
+
+``` javascript
+var mat = pcorr( [x,y] );
+// returns [[1,-1],[-1,1]]
+```
 
 
 ## Examples
 
 ``` javascript
-var foo = require( 'compute-pcorr' );
+var pcorr = require( 'compute-pcorr' );
+
+// Simulate some data...
+var N = 100,
+	x = new Array( N ),
+	y = new Array( N ),
+	z = new Array( N );
+
+for ( var i = 0; i < N; i++ ) {
+	x[ i ] = Math.round( Math.random()*100 );
+	y[ i ] = Math.round( Math.random()*100 );
+	z[ i ] = 100 - x[ i ];
+}
+var mat = pcorr( x, y, z );
+console.log( mat );
 ```
 
 To run the example code from the top-level application directory,
