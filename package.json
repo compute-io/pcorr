@@ -1,6 +1,6 @@
 {
   "name": "compute-pcorr",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Computes Pearson product-moment correlation coefficients between one or more numeric arrays.",
   "author": {
     "name": "Athan Reines",
