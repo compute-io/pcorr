@@ -2,7 +2,7 @@ Correlation Matrix
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
 
-> Computes the [Pearson product-moment correlation coefficients](http://en.wikipedia.org/wiki/Pearson_product-moment_correlation_coefficient) between one or more numeric arrays.
+> Computes [Pearson product-moment correlation coefficients](http://en.wikipedia.org/wiki/Pearson_product-moment_correlation_coefficient) between one or more numeric arrays.
 
 
 ## Installation
@@ -24,7 +24,7 @@ var pcorr = require( 'compute-pcorr' );
 
 #### pcorr( arr1[, arr2,...] )
 
-Computes the [Pearson product-moment correlation coefficients](http://en.wikipedia.org/wiki/Pearson_product-moment_correlation_coefficient) between one or more numeric arrays.
+Computes [Pearson product-moment correlation coefficients](http://en.wikipedia.org/wiki/Pearson_product-moment_correlation_coefficient) between one or more numeric arrays.
 
 ``` javascript
 var x = [ 1, 2, 3, 4, 5 ],
